@@ -89,12 +89,12 @@ function App() {
           <span
           key={item}
           className={item===filter?"active":""}
-          id={`filter-btn-${index+1}`}
+          {...(index !== 0 && { id: `filter-btn-${index}` })}
           onClick={() => {
             setFilter(item);
           }}
         >
-          {item}
+          {(item).charAt(0).toUpperCase()+item.slice(1)}
         </span>
         ))}
       </div>

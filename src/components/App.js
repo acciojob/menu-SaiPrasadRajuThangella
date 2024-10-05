@@ -81,7 +81,7 @@ function App() {
   filters = ["All", ...filters];
 
   return (
-    <div id="main">
+    <div id="#main">
       <h1>Our Menu</h1>
 
       <div className="filters">
@@ -89,7 +89,7 @@ function App() {
           <span
           key={item}
           className={item===filter?"active":""}
-          {...(index !== 0 && { id: `filter-btn-${index}` })}
+          {...(index !== 0 && { id: `#filter-btn-${index}` })}
           onClick={() => {
             setFilter(item);
           }}

@@ -81,20 +81,21 @@ function App() {
   filters = ["All", ...filters];
 
   return (
-    <div>
+    <div id="main">
       <h1>Our Menu</h1>
 
       <div className="filters">
         {filters.map((item) => (
           <span
-            key={item}
-            className={item===filter?"active":""}
-            onClick={() => {
-              setFilter(item);
-            }}
-          >
-            {item}
-          </span>
+          key={item}
+          className={item===filter?"active":""}
+          id={`filter-btn-${index+1}`}
+          onClick={() => {
+            setFilter(item);
+          }}
+        >
+          {item}
+        </span>
         ))}
       </div>
 
